@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MOVIE PATH</title>
+
+    <link rel="stylesheet" href="index.html">
+    <link rel="stylesheet" href="movies-en.html">
+    <link rel="stylesheet" href="filmler.html">
+
+
+    <style>
+    :root{
+        --bg:#0b0b0c;
+        --panel:#111213;
+        --muted:#9b9b9b;
+        --accent:#d94848;
+        --glass: rgba(255,255,255,0.03);
+        --card-grad: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12));
+        --radius:14px;
+        --card-radius:18px;
+    }
+
+    html,body{
+        height: 100%;
+        margin: 0;
+        font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+        background: linear-gradient(180deg, #050506 0%, #0c0c0d 60%);
+        color: #e9e9ea;
+    }
+    
+    .hero-video{
+    width:100%;
+    height:100vh;
+    object-fit: cover;
+    }
+
+    .wrap{
+        width: 1100px;
+        max-width: 95%;
+        margin: 32px auto;
+        border-radius: 18px;
+        padding: 24px 16px;
+        box-shadow: 0 30px 80px rgba(0,0,0,0.7);
+        border: 1px solid rgba(255,255,255,0.02);
+        position: relative;
+
+    }
+
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 28px;
+    }
+
+   nav a{
+    color: #ff4040;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+     
+    nav{
+        display: flex;
+        justify-content: center;
+    }
+
+    nav div {
+        display: flex;
+        gap: 16px;
+    }
+
+    .hero{
+        text-align: center;
+        padding: 18px 40px 34px;
+    }
+
+    .hero h1{
+        font-size: 36px;
+        font-weight: 900;
+    }
+
+    .hero p{
+        color: var(--muted);
+        font-size: 14px;
+    }
+
+    .section-title{
+        font-weight: 800;
+        margin: 28px 0 14px;
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    .movie-card{
+        border-radius: 18px;
+        overflow: hidden;
+        position: relative;
+        min-height: 420px;
+        color: #fff;
+    }
+
+    .movie-card .poster{
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        filter: brightness(0.6);
+    }
+
+    .movie-card .overlay{
+        position: relative;
+        padding: 18px;
+        z-index: 2;
+    }
+
+     .lang-switch {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background: black;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.lang-item {
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+
+.lang-item:hover {
+  background: #f0f0f0;
+}
+
+/* Bayrak hizalama */
+.lang-item img {
+  width: 20px;
+  height: auto;
+}
+
+#splash{
+  position:fixed;
+  inset:0;
+  background:black;
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+#splash video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+
+
+
+.dot.active{background: var(--accent); width:30px; height: 6px; border-radius: 6px;}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+   .logo {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .logo img {
+    width: 120px;   
+    height: auto;
+  } 
+
+  nav div {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .featured {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+</style>
+</head>
+
+<body>
+   <video class="hero-video" autoplay muted loop playsinline>
+        <source src="videologo.mp4" type="video/mp4">
+    </video>
+
+    
+<div class="wrap">
+
+<header>
+    <div class="logo">
+        <img src="resimler/logo1.png">
+    </div>
+
+    <h1>Watch Finder</h1>
+      
+      <nav class="menu">
+        <div>
+            <div style="display:flex;align-items: center; gap:30px;padding: 20px;">
+            <h1 style="margin: 0;color: white;"></h1>
+            <a href="index.html"  style="color:#ff4040;">Home</a>
+            <a href="movies-en.html" style="color:#ff4040;">Movies</a>
+        </div>
+        </nav>
+
+
+</header>
+
+<section class="hero">
+    <h1>A LIFE IN EVERY MOVIE</h1>
+    <p>Every movie is a world; you choose which one to step into.</p>
+</section>
+
+<div class="lang-switch">
+  <a class="lang-item" href="index.html">
+    <img src="https://flagcdn.com/w20/tr.png" alt="TR"> Türkçe
+  </a>
+  <a class="lang-item" href="index-en.html">
+    <img src="https://flagcdn.com/w20/us.png" alt="EN"> English
+  </a>
+</div>
+
+
+<h4 class="section-title">FEATURED</h4>
+
+<article class="movie-card">
+    <div class="poster" style="background-image:url(flimler/breakingbad.png);"></div>
+    <div class="overlay">
+        <h3>BREAKING BAD</h3>
+        <p>Chemistry teacher Walter White learns he has cancer and starts producing drugs to secure his family's future, gradually becoming ruthless.</p>
+        <div class="muted">2008</div>
+    </div>
+</article>
+
+<article class="movie-card">
+    <div class="poster" style="background-image:url(flimler/fallmov.png);"></div>
+    <div class="overlay">
+        <h3>FALL</h3>
+        <p>Two women climb a 610-meter TV tower and become trapped at the top.</p>
+        <div class="muted">2022</div>
+    </div>
+</article>
+
+<article class="movie-card">
+    <div class="poster" style="background-image:url(flimler/hız.jpeg);"></div>
+    <div class="overlay">
+        <h3>FAST AND FURIOUS</h3>
+        <p>Street racer Dominic Toretto leads a crew pulling off high-speed heists while an undercover cop infiltrates the group.</p>
+        <div class="muted">2001</div>
+    </div>
+</article>
+
+<article class="movie-card">
+    <div class="poster" style="background-image:url(flimler/buldozer.jpeg);"></div>
+    <div class="overlay">
+        <h3>BULLDOZER</h3>
+        <p>A former football star turned fisherman is asked to coach a local team, leading to unexpected events.</p>
+        <div class="muted">1978</div>
+</article>
+
+<footer class="footer">
+    <p>© 2025 | All rights reserved.</p>
+    We do not stream or host films. All content is for informational purposes only.
+</footer>
+
+
+<script src="script.js"></script>
+
+</div>
+</div>
+
+</body>
+</html>

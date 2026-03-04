@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Filmler</title>
+
+<style>
+body{
+  margin:0;
+  background:#0d0d0d;
+  font-family:Arial, sans-serif;
+  color:white;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 40px;
+  background:#111;
+  align-items:center;
+}
+
+nav a{
+  color:#ddd;
+  margin-left:25px;
+  text-decoration:none;
+}
+
+nav a:hover{ color:#ff4040; }
+
+/* === YAN YANA OLAYI === */
+.film-list{
+  padding:40px;
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(250px, 1fr));
+  gap:25px;
+  justify-items:center;
+}
+
+/* === FLIP CARD === */
+.flip-card{
+  background:transparent;
+  width:250px;
+  height:380px;
+  perspective:1000px;
+}
+
+.flip-card-inner{
+  position:relative;
+  width:100%;
+  height:100%;
+  transition:transform .7s;
+  transform-style:preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner{
+  transform:rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back{
+  position:absolute;
+  width:100%;
+  height:100%;
+  backface-visibility:hidden;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.flip-card-front img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.flip-card-back{
+  background:#1a1a1a;
+  transform:rotateY(180deg);
+  padding:20px;
+  text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div>
+    <a href="index.html">Anasayfa</a>
+    <a href="filmler.html" style="color:#ff4040;">Filmler</a>
+  </div>
+</nav>
+
+<div class="film-list">
+
+  <!-- ÇERNOBİL -->
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="flimler/cernobil.jpeg">
+      </div>
+      <div class="flip-card-back">
+        <h3>ÇERNOBİL</h3>
+        <p>Nükleer facianın unutulmaz dramatik hikâyesi.</p>
+        <a href="https://www.youtube.com/watch?v=G8xJb6-ZNKM" target="_blank" style="color:#ff4040;">Fragmanı İzle</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- EVDE TEK BAŞINA -->
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="flimler/evde-tek-basina.jpg">
+      </div>
+      <div class="flip-card-back">
+        <h3>EVDE TEK BAŞINA</h3>
+        <p>Kevin evde hırsızlara karşı tek başına mücadele eder.</p>
+        <a href="https://www.youtube.com/watch?v=dzdpqRGA1qc" target="_blank" style="color:#ff4040;">Fragmanı İzle</a>
+      </div>
+    </div>
+  </div>
+
+    <!-- EXAM -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="flimler/exam.jpg">
+        </div>
+        <div class="flip-card-back">
+          <h3>EXAM</h3>
+          <p>Gizemli bir iş mülakatında kapalı oda gerilimi.</p>
+          <a href="https://www.youtube.com/watch?v=hbivC9ztGOE" target="_blank" style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+    </div> 
+    
+    
+    <!-- EXTRACTION -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="flimler/extraction.jpeg">
+        </div>
+        <div class="flip-card-back">
+          <h3>EXTRACTION</h3>
+          <p>Tetikçi Tyler Rake tehlikeli bir kurtarma görevine çıkar.</p>
+          <a href="https://www.youtube.com/watch?v=o8ieSFl__mQ" target="_blank" style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+    </div> 
+
+
+    <!-- FALL -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/fallmov.png">
+                </div>
+                <div class="flip-card-back">
+                    <h3>FALL</h3>
+                    <p>İki arkadaş 600 metrelik kulenin tepesinde mahsur kalır.</p>
+                    <a href="https://www.youtube.com/watch?v=iSspRSGc4Dk" target="_blank" style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+    </div> 
+
+
+    <!-- THE GANGSTER THE COP THE DEVİL -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/gang.jpg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>THE GANGSTER THE COP THE DEVİL</h3>
+                    <p>Tanık olduğu cinayetin suçlularının yakalanması için polisle iş birliği yapmak zorunda kalan bir mafya babasının hikayesini konu ediyor</p>
+                    <a href="https://www.youtube.com/watch?v=D1XANQUYSvk" target="_blank" style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+    </div> 
+
+    <!--GODFATHER-->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/godfather.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>GODFATHER</h3>
+                    <p>The Godfather, New York’ta yaşayan güçlü Corleone suç ailesinin hikâyesini anlatır.
+Ailenin yaşlanan lideri Vito Corleone, işleri barış içinde yürütürken işler değişir ve aile saldırıya uğrar. Bu olaydan sonra, yıllarca suç dünyasından uzak duran oğlu Michael Corleone, zamanla acımasız, zeki ve güçlü bir mafia liderine dönüşür.</p>
+                <a href="https://www.youtube.com/watch?v=UaVTIH8mujA" target="_blank" style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+    </div> 
+
+
+     <!-- HIZLI VE ÖFKELİ -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/hız.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>HIZLI VE ÖFKELİ</h3>
+                    <p> Los Angeles sokaklarına karanlık çöktükten sonra sınır tanımadan otomobil yarışları yapan bir grubun lideridir. 
+                        Polis, sokaklarda dehşet saçan Toretto'nun aynı zamanda hırsızlık yaptığından; yüksek değerdeki elektronik aletleri çaldığından da şüphe etmektedir. 
+                         </p>
+                        <a href="https://www.youtube.com/watch?v=o2hqZeVRxzo" target="_blank" style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+    </div> 
+
+    <!--İYİ,KÖTÜ,ÇİRKİN-->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/iyi_kötü_cirkin.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>İYİ,KÖTÜ,ÇİRKİN</h3>
+                    <p>Üç silah arkadaşının maceralarını konu ediyor. Ortak bir hedefe doğru değişik nedenlerle yol almakta olan üç silah arkadaşı aslında kader açısından yolları kesişmiş insanlardır. 
+                    İsimleri İyi, Kötü ve Çirkin olan bu kişiler için ödül avcılarından kurtaran fırsatçı bir silahlı adamdır.</p>
+                    <a href="https://www.youtube.com/watch?v=IFNUGzCOQoI" target="_blank" style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+    </div> 
+
+
+    <!-- G.I. JOE: KOBRA'NIN YÜKSELİŞİ -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/joe.jpg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>G.I. JOE: KOBRA'NIN YÜKSELİŞİ </h3>
+                    <p>Seçkin bir askeri birlik olan G.I. Joe, dünyayı ele geçirmeyi planlayan terör örgütü Cobra’ya karşı yüksek teknolojili silahlar ve özel operasyonlarla küresel bir mücadele verir</p>
+                    <a href="https://www.youtube.com/watch?v=OqymrugFevw" target="_blank" style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+    </div> 
+
+    
+    <!--KASABADAKİ YABANCI -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/kasabadaki_yabanci.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>KASABADAKİ YABANCI</h3>
+                    <p>Küçük bir kasabaya gelen gizemli bir yabancının oradaki kötü adamlardan intikam almasını konu alıyor.
+
+Kasaba halkı korkaktır; yabancı onları korur ve kasabaya düzen getirir. Lago, suçlularla dolu bir kasabadır.
+
+Kasabada 20 dakika içinde meydana gelen üç cinayet  olayının üç suçludan kasabayı koruma çabalarına odaklanıyor.</p>
+                 <a href="https://www.youtube.com/watch?v=tKHX4M3vJg4" target="_blank" style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+    </div> 
+
+
+    <!--MUHTEŞEM YEDİLİ-->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/muhtesem yedili.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>MUHTEŞEM YEDİLİ</h3>
+                    <p>Küçük bir Meksika kasabası, acımasız bir çete tarafından sürekli soygun ve baskınlara uğrar. Bunun üzerine yedi yetenekli silahşör, kasabayı korumak,çeteyi durdurmak için bir araya gelir.
+
+Yedili, kasabayı savunmak için plan yapar, çeteye karşı zekice tuzaklar kurar ve çatışmaya girerler.</p>
+                    <a href="https://www.youtube.com/watch?v=q-RBA0xoaWU" target="_blank" style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+    </div> 
+
+
+    <!--MEMORİES OF MURDER-->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/of murder.jpg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>MEMORİES OF MURDER</h3>
+                    <p>1980’lerde Güney Kore’de işlenen gerçek bir seri cinayetten esinlenen film, iki dedektifin çözülemeyen cinayetler karşısında çaresizlik, şiddet ve adalet arayışını konu alır 
+                    ama deliller yetersizdir ve suçlu akıllıca iz bırakır. </p>
+                    <a href="https://www.youtube.com/watch?v=ux6VHo5jQVw" target="_blank" style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+    </div> 
+
+
+    <!--RAMBO-->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/rambo.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>RAMBO</h3>
+                    <p>Vietnam gazisi John Rambo, küçük bir kasabada uğradığı haksız muamele sonrası polise karşı tek başına hayatta kalma mücadelesi verir. 
+                        Film, savaşın askerler üzerindeki psikolojik etkisini anlatır.</p>
+                    <a href="https://www.youtube.com/watch?v=d2anWtDXeR8" target="_blank" style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+    </div> 
+
+
+    <!--RED 2 -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/red2.jpg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>RED 2 </h3>
+                    <p>Emekli CIA ajanı Frank Moses, huzurlu bir hayat sürerken eski bir görev nedeniyle yeniden aksiyonun içine çekilir. Bu kez yanında eski ekibi ve bazı yeni müttefikleri vardır. Görev, dünya çapında bir komplonun peşinden gitmelerini gerektirir
+                    </p>
+                    <a href="https://www.youtube.com/watch?v=sCM3HhGUJsM" target="_blank" style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+    </div> 
+
+
+    <!--ROCKY-->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/rock.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>ROCKY </h3>
+                    <p>Yoksul ve kimsesiz, eğitimsiz, iyi kalpli bir İtalyan-Amerikalı işçi sınıfından olan ve küçük çaplı bir kulüp boksörü olan Rocky Balboa'nın 
+                    Amerikan Rüyası hikâyesini anlatıyor. 
+                    Film, Rocky’nin azmi, cesareti ve kendi sınırlarını aşma çabasını konu alır; ringdeki mücadelesi, hayatta da kendi değerini bulma hikayesidir.</p>
+                    
+                    <a href="video/rocky.mp4" target="_blank" style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+    </div> 
+
+
+    <!--SCARFACE-->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/scarface.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>SCARFACE</h3>
+                    <p>Küba’dan Amerika’ya göç eden Tony Montana, Miami’de suç dünyasında yükselmeye başlar. Uyuşturucu ticareti ve şiddetle güç kazanır, 
+                    ancak hırsı ve açgözlülüğü onu tehlikeli bir yola sürükler. Film, Tony’nin yükselişi, düşüşü ve trajik sonunu, güç, para ve ihanet temalarıyla işler. </p>
+                    <a href="https://www.youtube.com/watch?v=cv276Wg3e7I" target="_blank" style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+    </div> 
+
+
+    <!--TEKSAS KATLİAMI-->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/teksas.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>TEKSAS KATLİAMI</h3>
+                    <p>Bir grup genç, Teksas’ta bir köyü ziyaret eder ve burada korkunç bir aileyle karşılaşır. 
+                        Bu aile, seri katil Leatherface ve onun vahşi yöntemleriyle gençleri avlamaktadır. Film, hayatta kalma mücadelesi, dehşet ve şiddet temaları üzerine kurulu.</p>
+                    <a href="https://www.youtube.com/watch?v=zcI6SFiK_yk" target="_blank" style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+    </div> 
+
+   
+    <!--TERMİNATÖR-->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/terminator.jpg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>TERMİNATÖR</h3>
+                    <p>Gelecekte makineler dünyayı ele geçirir. İnsanlığın kaderini değiştirecek bir liderin doğumunu engellemek için geçmişe bir Terminatör gönderilir</p>
+                     <a href="https://www.youtube.com/watch?v=0GTjHZ1y1t8" target="_blank" style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+    </div> 
+
+
+    <!--I SAW THE DEVİL-->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/the devil.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>I SAW THE DEVİL</h3>
+                    <p>
+                    Nişanlısını öldüren seri katilin peşine düşen bir gizli ajan, intikam ile adalet arasındaki çizgide acımasız bir kovalamacaya girer. İnsanın intikam uğruna ne yapabileceğini göz önüne serer.
+                    Acıdan doğan adalet, merhameti tanımaz.
+                    </p>
+                    <a href="video/isawthedevil.mp4" target="_blank" style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+    </div> 
+
+
+    <!--GERİLİM HATTI -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/gerilimhatti.jpg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>GERİLİM HATTI</h3>
+                    <p>Bir grup arkadaş eğlenceli bir tırmanış yapmaya karar verir. Tırmanış rotası kapalı olsa da yollarına devam ederler. 
+                        Göze aldıkları bu tırmanış, gittikçe daha riskli ve tehlikeli bir hal alır ve kazalar birbirini izler. Yolun kapalı olmasının bir nedeni vardır.. </p>
+                    <a href="https://www.youtube.com/watch?v=xw49zEs9Jyw" target="_blank" style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+    </div> 
+
+
+    <!--JOHN WİCK -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/johnwick.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>JOHN WİCK</h3>
+                    <p>John Wick için hayatın tek anlamı karısından geriye kalan köpeğidir. Bir gün Rus mafya prensi Iosef Tasarov ve adamları evine girer ve 
+                    1969 model Mustang'ını çalıp, köpeğini öldürürler. İntikam ateşiyle eski hayatına geri döner ve düşmanlarıyla amansız bir mücadeleye başlar. </p>
+                    <a href="https://www.youtube.com/watch?v=QAj6yYiqOaw" target="_blank" style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+    </div> 
+
+
+    <!--GRAVE OF THE FİREFLİES -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/graveofthe.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>GRAVE OF THE FİREFLİES</h3>
+                    <p>İkinci Dünya Savaşı'nın son günlerinde yaşayan iki genç Japon kardeş Seita ve Setsuko'nun hikayesi. 
+                    Bir Amerikan bombardımanı sonucu anne babalarından ayrılan iki kardeş, hayatta kalma mücadelesi verirken tamamen birbirlerine güvenmek zorunda kalırlar.</p>
+                    <a href="https://www.youtube.com/watch?v=lhlh7JVcTt8" target="_blank" style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+    </div> 
+
+
+    <!--BATTLE ROYALE-->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/battleroyale.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>BATTLE ROYALE</h3>
+                    <p>Totaliter bir Japonya’da, bir sınıf lise öğrencisi ıssız bir adaya bırakılır ve hayatta kalmak için birbirlerini öldürmeye zorlanır. Son kalan kazanır.</p>
+                     <a href="https://www.youtube.com/watch?v=N0p1t-dC7Ko" target="_blank" style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+    </div> 
+
+
+    <!--AFTER THE STORM-->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/afterthestorm.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>AFTER THE STORM</h3>
+                    <p>Başarısız bir yazar olan Ryota, babasının ölümünden sonra ailesiyle olan bağlarını ve kendi babalığını sorgulamaya başlar.
+                        Boşandığı eşi ve küçük oğluyla ilişkisini düzeltmeye çalışırken, bir gece hepsini bir araya getiren tayfun, geçmiş pişmanlıkları ve babanın yokluğunun ailede bıraktığı boşluğu ortaya çıkar.</p>
+                    <a href="https://www.youtube.com/watch?v=7YbYx-OR4-Y" target="_blank" style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+    </div> 
+
+
+    <!--SİLENCED-->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/duyulmayan.jpg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>SİLENCED</h3>
+                    <p>Sağır ve dilsiz çocukların kaldığı bir okulda öğretmen, çocuklara yıllarca cinsel ve fiziksel istismar yapıldığını fark eder. Okul yönetimi ve yetkililer olayı örtbas etmeye çalışır. 
+                    Öğretmen ve bir insan hakları savunucusu gerçeği ortaya çıkarır. Film gerçek olaylara dayanır ve Kore’de yasa değişikliğine sebep olmuştur.</p>
+                     
+                    <a href="https://www.youtube.com/watch?v=k3BUIreDAeY" target="_blank"  style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+    </div> 
+
+
+    <!--KIZ KARDEŞİM-->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/kizkardesim.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>MOMO : KIZ KARDEŞİM</h3>
+                    <p>Dokuz yaşında bir çocuk; hem ağabey, hem baba, hem anne, hem de bir bilge olabilir mi? Ayşe için olur. Hatta hiçbir şeyden korkmayan bir ağabeydir o.     
+
+                        Başka bir kadınla evlenip, evden ayrılan babaları Kazım, çocuklarını Hasan Dede’nin yanında kaderlerine terk etmiştir. Bu iki kardeş her şeye rağmen yaşama umudunu yitirmezler
+                    </p>
+                     
+                    <a href="https://www.youtube.com/watch?v=VWZComNJsAI" target="_blank"  style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+    </div> 
+
+
+    <!--KAR KARDEŞLİĞİ-->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/karkardesliği.webp">
+                </div>
+                <div class="flip-card-back">
+                    <h3>KAR KARDEŞLİĞİ</h3>
+                    <p>Bir uçak kazasından sağ kurtulan insanların hayatta kalabilmek için verdikleri mücadeleyi konu ediyor. 1972'de, bir ragbi takımını Şili'ye uçurmak için kiralanan Uruguay Hava Kuvvetleri Uçuş 571, And Dağları'nın kalbindeki bir buzulda feci bir şekilde düşer. Kazada, 45 yolcudan sadece 29'u sağ kurtulur. 
+                    Kendilerini dünyanın en zorlu ortamlarından birinde bulan yolcular, hayatta kalabilmek için aşırı önlemlere başvurmak zorunda kalır.
+                    </p>
+                    <a href="https://www.youtube.com/watch?v=cc3YiN5Fj8k" target="_blank"  style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+    </div> 
+
+     <!--DEATH NOTE-->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/deathnote.jpg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>DEATH NOTE</h3>
+                    <p>Tüm shinigamilerin (Ölüm tanrısı) sahip olduğu, insanları öldürmek ve yaşam sürelerini kısaltmak için kullandıkları bir tür süper güçlere sahip defterdir.
+                      Sonrasında bu defterle ismini yazdığı kişiyi öldürebildiğini fark eden Light, dünyadaki suçluları öldürerek adaleti sağlamaya karar verir.</p>
+                    <a href="https://www.youtube.com/watch?v=mdZQ-_GLzYs" target="_blank" style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+    </div> 
+
+    
+    <!--127 SAAT-->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/127saat.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>127 SAAT </h3>
+                    <p>Genç dağcı Aron Ralston, kimseye haber vermeden çıktığı yolculuğunda Utah yakınlarında Moab bölgesinde büyük bir kaya parçasının arasına sıkışır. 
+                      5 gün boyunca hayatta kalmak için elinden geleni yapmak zorundadır</p>
+                    <a href="https://www.youtube.com/watch?v=F_vag_QG8pY" target="_blank" style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+    </div> 
+
+    <!--MEMOİRS OF MURDER-->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/memoirsofmurderjapon.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>SATSUJINSHA NO KIOKU</h3>
+                    <p>15 yıl önce işlediği seri cinayetlerden, zaman aşımı yasası sayesinde kurtulan bir adam, anılarını kitap olarak yayımlar ve toplumda büyük yankı uyandırır.
+Ancak cinayetlerde ailesini kaybeden eski bir dedektif, onun gerçek katil olmayabileceğinden şüphelenir.</p>
+                    <a href="https://www.youtube.com/watch?v=V_ALj8gYHY0" target="_blank" style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+    </div> 
+
+     
+    <!--İ AM İCHİASHİ-->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/ichiashi.jpg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>I AM İCHİHASHİ</h3>
+                    <p>Film, 2007 yılında Japonya’da gerçekten yaşanmış bir cinayete dayanır. 
+                        Baş karakter Tatsuya Ichihashi, İngilizce öğretmeni olan İngiliz vatandaşı Lindsay Hawker’ı öldürür.
+Olaydan sonra Ichihashi kaçar ve Japonya genelinde yaklaşık 2 yıl boyunca firari yaşar. Film, onun kaçış sürecini, kimliğini gizleyerek hayatta kalma çabasını anlatır.</p>
+        
+                <a href="https://www.youtube.com/watch?v=KlYh7Lr6cdc" target="_blank" style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+<script src="script.js"></script>
+
+</body>
+</html>

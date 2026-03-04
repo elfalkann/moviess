@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+
+    <link rel="stylesheet" href="filmler.html">
+    <link rel="stylesheet" href="index-en.html">
+    <link rel="stylesheet" href="index.html">
+
+    <style>
+        body{
+            margin: 0;
+            background: #0d0d0d;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 40px;
+            background: #111;
+            align-items: center;
+        }
+       
+        nav a {
+            color: #ddd;
+            margin-left: 25px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #ff4040;
+        }
+
+        /* --- Movie list grid --- */
+        .film-list {
+            padding: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+            justify-items: center;
+        }
+
+        /* --- Flip card --- */
+        .flip-card {
+            background: transparent;
+            width: 250px;
+            height: 380px;
+            perspective: 1000px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.7s ease;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .flip-card-front img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .flip-card-back {
+            background: #1a1a1a;
+            transform: rotateY(180deg);
+            padding: 20px;
+            text-align: center;
+        }
+        
+</style>
+</head>
+
+<body>
+  <nav>
+        <div>
+            <a href="index-en.html">Home</a>
+            <a href="movies-en.html" style="color:#ff4040;">Movies</a>
+        </div>
+    </nav>
+
+    <div class="film-list">
+
+        <!-- CHERNOBYL -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/cernobil.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>CHERNOBYL</h3>
+                    <p>The unforgettable dramatic story of the nuclear disaster.</p>
+                    <a href="https://www.youtube.com/watch?v=G8xJb6-ZNKM" target="_blank" style="color: #ff4040">Watch Trailer</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- HOME ALONE -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/evde-tek-basina.jpg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>HOME ALONE</h3>
+                    <p>Kevin defends his home alone against burglars.</p>
+                    <a href="https://www.youtube.com/watch?v=dzdpqRGA1qc" target="_blank" style="color: #ff4040">Watch Trailer</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- EXAM -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/exam.jpg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>EXAM</h3>
+                    <p>Tension unfolds during a mysterious job interview in a locked room.</p>
+                     <a href="https://www.youtube.com/watch?v=hbivC9ztGOE" target="_blank" style="color: #ff4040">Watch Trailer</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- EXTRACTION -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/extraction.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>EXTRACTION</h3>
+                    <p>Tyler Rake, a mercenary, embarks on a dangerous rescue mission.</p>
+                    <a href="https://www.youtube.com/watch?v=o8ieSFl__mQ" target="_blank" style="color: #ff4040">Watch Trailer</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FALL -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/fallmov.png">
+                </div>
+                <div class="flip-card-back">
+                    <h3>FALL</h3>
+                    <p>Two friends get stranded on top of a 600-meter tower.</p>
+                     <a href="https://www.youtube.com/watch?v=iSspRSGc4Dk" target="_blank" style="color: #ff4040">Watch Trailer</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- THE GANGSTER THE COP THE DEVIL -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/gang.jpg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>THE GANGSTER THE COP THE DEVIL</h3>
+                    <p>It tells the story of a mob boss who is forced to cooperate with the police to catch the perpetrators of the murder he witnessed.</p>
+                    <a href="https://www.youtube.com/watch?v=D1XANQUYSvk" target="_blank" style="color: #ff4040">Watch Trailer</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- GODFATHER -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/godfather.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>GODFATHER</h3>
+                    <p>The Godfather tells the story of the powerful Corleone crime family in New York. 
+                    As the aging head, Vito Corleone manages affairs peacefully until an attack shakes the family. 
+                   </p>
+                    <a href="https://www.youtube.com/watch?v=UaVTIH8mujA" target="_blank" style="color: #ff4040">Watch Trailer</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAST & FURIOUS -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/hız.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>FAST & FURIOUS</h3>
+                    <p>He is the leader of a gang that engages in reckless car races on the streets of Los Angeles after dark.
+
+The police suspect that Toretto, who terrorizes the streets, is also a thief, stealing high-value electronic devices. 
+According to the police, the best way to catch Toretto is to place a detective inside the speed-obsessed gang and catch them red-handed.</p>
+                    <a href="https://www.youtube.com/watch?v=o2hqZeVRxzo" target="_blank" style="color: #ff4040">Watch Trailer</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- İYİ,KÖTÜ,ÇİRKİN -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/iyi_kötü_cirkin.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>THE GOOD, THE BAD, AND THE UGLY</h3>
+                    <p>During the American Civil War, three gunmen set out in pursuit of a hidden gold treasure.
+                    These men, nicknamed The Good, The Bad, and The Ugly, engage in a relentless battle, using their wits and weapons to be the first to reach the gold. </p>
+                    <a href="https://www.youtube.com/watch?v=IFNUGzCOQoI" target="_blank" style="color: #ff4040">Watch Trailer</a>
+                </div>
+            </div>
+        </div>
+
+         <!-- G.I. JOE: RISE OF COBRA -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/joe.jpg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>G.I. JOE: RISE OF COBRA</h3>
+                    <p>A global threat, the Cobra organization, devises a plan for global chaos using cutting-edge weaponry,
+                    The G.I. Joe team races against time to stop this dangerous plan.</p>
+                    <a href="https://www.youtube.com/watch?v=OqymrugFevw" target="_blank" style="color: #ff4040">Watch Trailer</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- THE STRANGER IN TOWN -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/kasabadaki_yabanci.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>THE STRANGER IN TOWN</h3>
+                    <p>A mysterious stranger arrives in a small town known for crime. 
+                    The townspeople ask him for help, but his arrival uncovers the town's dark past and hidden crimes.</p>
+                     <a href="https://www.youtube.com/watch?v=tKHX4M3vJg4" target="_blank" style="color: #ff4040">Watch Trailer</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- THE MAGNIFICENT SEVEN -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/muhtesem yedili.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>THE MAGNIFICENT SEVEN</h3>
+                    <p>A small Mexican town is constantly robbed and raided by a ruthless gang. Seven skilled gunmen come together to protect the town and stop the gang.
+                        Each has a different background and skill set; some are martial arts experts, some sharpshooters, some strategists.
+
+The seven devise a plan to defend the town, set clever traps against the gang, and engage in a major confrontation.</p>
+                    <a href="https://www.youtube.com/watch?v=q-RBA0xoaWU" target="_blank" style="color: #ff4040">Watch Trailer</a>
+                </div>
+            </div>
+        </div>
+                   
+
+        <!-- MEMORIES OF MURDER -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/of murder.jpg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>MEMORIES OF MURDER</h3>
+                    <p>The story begins in October 1986 with the discovery of a raped and murdered woman's body in a canal near a field. Soon after, another woman's body, also raped, is found.
+
+In the 1980s, a series of rapes and murders occur in a small Korean town. Two detectives try to catch the culprit,
+
+but the evidence is insufficient, and the perpetrator cleverly leaves clues.</p>
+                  <a href="https://www.youtube.com/watch?v=ux6VHo5jQVw" target="_blank" style="color: #ff4040">Watch Trailer</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- RAMBO -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/rambo.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>RAMBO</h3>
+                    <p>Vietnam veteran John Rambo visits an old friend in a small town. However, due to a dispute with the police, he is unjustly arrested and mistreated. Rambo fights alone in the wilderness to survive and regain his freedom.
+                    The film focuses on Rambo's military skills, his struggle for survival, and his quest for justice..</p>
+                    <a href="https://www.youtube.com/watch?v=d2anWtDXeR8" target="_blank" style="color: #ff4040">Watch Trailer</a>;
+                </div>
+            </div>
+        </div>
+
+        <!-- RED 2 -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/red2.jpg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>RED 2</h3>
+                    <p>Retired CIA agent Frank Moses is living a peaceful life when an old mission pulls him back into the action.He's joined by his old team and some new allies. The mission requires them to uncover a global conspiracy, and it's filled with action-packed chases, explosions, and fights.</p>
+                     <a href="https://www.youtube.com/watch?v=sCM3HhGUJsM" target="_blank" style="color: #ff4040">Watch Trailer</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ROCKY -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/rock.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>ROCKY</h3>
+                    <p> Rocky Balboa is an amateur boxer who spends his spare time boxing at a local club in his small town. No one takes him seriously, 
+                        but unexpectedly, Rocky Balboa gets the chance to step into the ring with world champion Apollo Creed.
+                    </p>
+                    <a href="video/rocky.mp4" target="_blank" style="color: #ff4040">Watch Trailer</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCARFACE -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/scarface.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>SCARFACE</h3>
+                    <p>Tony Montana, an immigrant from Cuba, rises to prominence in Miami's criminal underworld. He gains power through drug trafficking and violence,
+                     but his ambition and greed lead him down a dangerous path. The film explores Tony's rise, fall, and tragic end, interwoven with themes of power, money, and betrayal..</p>
+                    <a href="https://www.youtube.com/watch?v=cv276Wg3e7I" target="_blank" style="color: #ff4040">Watch Trailer</a>
+                </div>
+            </div>
+        </div>
+        <!-- TEXAS CHAINSAW MASSACRE -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/teksas.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>TEXAS CHAINSAW MASSACRE</h3>
+                    <p>A group of young people visit a village in Texas and encounter a terrifying family.
+                This family hunts young people using the methods of serial killer Leatherface and his brutal ways. The film is built around themes of survival, horror, and violence..</p>
+                    <a href="https://www.youtube.com/watch?v=zcI6SFiK_yk" target="_blank" style="color: #ff4040">Watch Trailer</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- TERMINATOR -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/terminator.jpg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>TERMINATOR</h3>
+                    <p>Kyle Reese, a soldier from the future, is sent to 1984 to protect John Connor, who will become the leader of the human resistance. However, the timeline has changed; Sarah Connor has become a powerful warrior in the past, accompanied by a reprogrammed Terminator.
+                        Ultimately, the team's goal is to prevent the extinction of humanity and thwart Skynet's plan.</p>
+                    <a href="https://www.youtube.com/watch?v=0GTjHZ1y1t8" target="_blank" style="color: #ff4040">Watch Trailer</a>
+                </div>
+            </div>
+        </div>
+                    
+
+        <!-- I SAW THE DEVIL -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/the devil.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>I SAW THE DEVIL</h3>
+                    <p>The film follows Kim Soo-hyun, a former special agent, as he seeks revenge after a serial killer is murdered by his wife. Soo-hyun wants to catch the killer and deliver justice himself. However, instead of killing him directly, he pursues the killer, inflicting pain on him and initiating a psychological cat-and-mouse game.
+                    The film reveals both the dark sides of the characters and what people are capable of doing in the pursuit of revenge.</p>
+                    <a href="video/isawthedevil.mp4" target="_blank" style="color: #ff4040">Watch Trailer</a>;
+                </div>
+            </div>
+        </div>
+
+        <!-- THE EDGE OF TENSION -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/gerilimhatti.jpg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>THE EDGE OF TENSION</h3>
+                    <p>A group of friends decide to go on a fun climb. Even though the climbing route is closed, they continue on their way.
+
+This climb, which they undertook, gradually becomes more risky and dangerous, and accidents follow one another. There is a reason the road is closed....</p>
+                    <a href="https://www.youtube.com/watch?v=xw49zEs9Jyw" target="_blank" style="color: #ff4040">Watch Trailer</a>
+                </div>
+            </div>
+        </div>
+
+                  
+        <!-- JOHN WICK -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/johnwick.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>JOHN WICK</h3>
+                    <p>For John Wick, the only meaning in life is his dog, the only thing left behind by his wife. One day, 
+                        Russian mafia boss Iosef Tasarov and his men break into his house, steal his 1969 Mustang, and kill his dog. Fueled by a thirst for revenge, he returns to his old life and begins a relentless fight against his enemies.</p>
+                    <a href="https://www.youtube.com/watch?v=QAj6yYiqOaw" target="_blank" style="color: #ff4040">Watch Trailer</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- GRAVE OF THE FIREFLIES -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/graveofthe.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>GRAVE OF THE FIREFLIES</h3>
+                    <p>This is the story of two young Japanese siblings, Seita and Setsuko, living during the final days of World War II.
+
+Separated from their parents by an American bombing raid, the two siblings must rely entirely on each other as they struggle to survive.</p>
+                    <a href="https://www.youtube.com/watch?v=lhlh7JVcTt8" target="_blank" style="color: #ff4040">Watch Trailer</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- BATTLE ROYALE -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/battleroyale.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>BATTLE ROYALE</h3>
+                    <p>The Japanese government devises a crazy plan to intimidate unruly Japanese youth and reduce violence. The plan envisions that the youth of a country plagued by unemployment, despair, and violence will learn their lesson and everything will improve.
+                    According to the plan, 42 violent Japanese students are forcibly sent to an island. To survive, they must kill each other.</p>
+                     <a href="https://www.youtube.com/watch?v=N0p1t-dC7Ko" target="_blank" style="color: #ff4040">Watch Trailer</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- AFTER THE STORM -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/afterthestorm.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>AFTER THE STORM</h3>
+                    <p>This is the story of two young Japanese siblings, Seita and Setsuko, living during the final days of World War II.
+                Separated from their parents by an American bombing raid, the two siblings must rely entirely on each other as they struggle to survive.</p>
+                    <a href="https://www.youtube.com/watch?v=7YbYx-OR4-Y" target="_blank" style="color: #ff4040">Watch Trailer</a>
+                </div>
+            </div>
+        </div>
+                  
+        
+         <!--SILENCED-->
+        <div class="flip-card">
+           <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="flimler/duyulmayan.jpg">
+            </div>
+            <div class="flip-card-back">
+            <h3>SILENCED</h3>
+            <p>A teacher at a school for deaf and mute children discovers that the children have been sexually and physically abused for years. The school administration and authorities try to cover up the incident.
+
+            The teacher and a human rights advocate uncover the truth. The film is based on real events and caused a change in the law in Korea.</p>
+
+            <a href="https://www.youtube.com/watch?v=k3BUIreDAeY" target="_blank" style="color:#ff4040;">Watch Trailer</a>
+            </div>
+             </div>
+        </div>
+
+
+    <!--MY SISTER-->
+       <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="flimler/kizkardesim.jpeg">
+        </div>
+        <div class="flip-card-back">
+        <h3>MOMO: MY SISTER</h3>
+        <p>Can a nine-year-old child be both a big brother, a father, a mother, and a wise man? For Ayşe, yes. In fact, he is a big brother who fears nothing.
+
+        Their father, Kazım, who married another woman and left home, abandoned his children to their fate with Grandpa Hasan. Despite everything, these two siblings never lose hope in life.</p>
+
+        <a href="https://www.youtube.com/watch?v=VWZComNJsAI" target="_blank" style="color:#ff4040;">Watch Trailer</a>
+        </div>
+        </div>
+       </div>
+
+
+    <!--SNOW BROTHERHOOD-->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+         <div class="flip-card-front">
+          <img src="flimler/karkardesliği.webp">
+          </div>
+        <div class="flip-card-back">
+        <h3>SNOW BROTHERHOOD</h3>
+        <p>It tells the story of the struggle for survival of people who survive a plane crash. In 1972, Uruguay Air Force Flight 571, chartered to fly a rugby team to Chile, crashes tragically on a glacier in the heart of the Andes Mountains. Of the 45 passengers, only 29 survive the crash.
+
+        Finding themselves in one of the world's harshest environments, the passengers are forced to resort to extreme measures to survive. </p>
+        <a href="https://www.youtube.com/watch?v=cc3YiN5Fj8k" target="_blank" style="color:#ff4040;">Watch Trailer</a>
+        </div>
+        </div>
+        </div>
+
+        
+    <!--DEATH NOTE-->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/deathnote.jpg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>DEATH NOTE</h3>
+                    <p>It is a kind of notebook with super powers that all shinigami (god of death) have and use to kill people and shorten their lifespan.
+                    After realizing that he can kill the person whose name he wrote with this notebook, Light decides to achieve justice by killing the criminals in the world.</p>
+                    <a href="https://www.youtube.com/watch?v=mdZQ-_GLzYs" target="_blank" style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+    </div> 
+
+    
+    <!--127 HOURS-->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="flimler/127saat.jpeg">
+                </div>
+                <div class="flip-card-back">
+                    <h3>127 HOURS</h3>
+                    <p>Young mountaineer Aron Ralston, setting out on a journey without informing anyone, gets trapped between a large rock formation in the Moab region near Utah.
+                    He must do everything in his power to survive for 5 days.</p>
+                    <a href="https://www.youtube.com/watch?v=Pm3QVVVk6KE" target="_blank" style="color:#ff4040;">Fragmanı İzle</a>
+        </div>
+      </div>
+    </div> 
+   
+
+    <!--MEMOIRS OF MURDER-->
+        <div class="flip-card">
+         <div class="flip-card-inner">
+            <div class="flip-card-front">
+               <img src="flimler/memoirsofmurderjapon.jpeg">
+            </div>
+            <div class="flip-card-back">
+                <h3>SATSUJINSHA NO KIOKU</h3>
+                <p>A man who got away with a series of murders he committed 15 years ago thanks to the statute of limitations, publishes his memoirs as a book, causing a great stir in society. However, a former detective who lost his family in the murders suspects that he may not be the real killer.</p>
+                <a href="https://www.youtube.com/watch?v=ibt41VqInYQ" target="_blank" style="color:#ff4040;">Watch the Trailer</a>
+        </div>
+     </div>
+</div>
+     
+     
+    <!--I AM İCHİHASHİ-->
+        <div class="flip-card">
+         <div class="flip-card-inner">
+            <div class="flip-card-front">
+               <img src="flimler/ichiashi.jpg">
+            </div>
+            <div class="flip-card-back">
+                <h3>I AM İCHİHASHİ</h3>
+                <p>The film is based on a real murder that took place in Japan in 2007.
+
+The main character, Tatsuya Ichihashi, murders Lindsay Hawker, a British English teacher. After the incident, 
+Ichihashi flees and lives as a fugitive throughout Japan for about two years. The film depicts his escape and his struggle to survive while concealing his identity.</p>
+
+                <a href="https://www.youtube.com/watch?v=KlYh7Lr6cdc" target="_blank" style="color:#ff4040;">Watch the Trailer</a>
+        </div>
+     </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

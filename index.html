@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FLİM YOLU</title>
+  
+    <link rel="stylesheet" href="index-en.html">
+    <link rel="stylesheet" href="filmler.html">
+    <link rel="stylesheet" href="movies-en.html">
+
+    <style>
+    :root{
+    --bg:#0b0b0c;
+    --panel:#111213;
+    --muted:#9b9b9b;
+    --accent:#d94848;
+    --glass: rgba(255,255,255,0.03);
+    --card-grad: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12));
+    --radius:14px;
+    --card-radius:18px;
+   
+}
+html,body{
+    height: 100%;
+    margin: 0;
+    font-family: 'Inter', system-ui, -apple-system,  'Segoe UI', Roboto,  'Helvetica Neue', Arial;
+    background: linear-gradient(180deg, #050506 0%, #0c0c0d 60%);
+    color: #e9e9ea;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    
+}
+
+.hero-video{
+    width:100%;
+    height:100vh;
+    object-fit: cover;
+}
+
+.wrap{
+    width: 1100px;
+    max-width: 95%;
+    margin: 32px auto;
+    background: linear-gradient(180de,rgba(255,255,255,0.02), rgba(0,0,0,0.15));
+    border-radius: 18px;
+    padding: 24px 16px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.7);
+    border: 1px solid rgba(255,255,255,0.02);
+    position: relative;
+}
+ header{
+    display: flex;
+    align-items: center;
+    justify-items: space-between;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family:'Montserrant', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.logo .mark{
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    background:linear-gradient(135deg,#ff6b6b,#d94848);
+    display: inline-flex;
+    align-items: center;
+    color: white;
+    font-weight: 800;
+    font-size: 14px;
+    box-shadow: 0 6px 18px rgba(217,72,72,0.25);
+
+}
+ nav{
+        display: flex;
+        justify-content: center;
+    }
+
+    nav div {
+        display: flex;
+        gap: 16px;
+    }
+  
+.hero{
+    text-align: center;
+    padding: 18px 40px 34px;
+}
+.hero h1{
+    margin: 6px 0 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 36px;
+    letter-spacing: 1px;
+}
+.hero p{
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.section-title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    margin: 28px 0 14px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.featured{
+    display: grid;
+    grid-template-columns: 1fr 1fr 360px;
+    gap:22px;
+    align-items: start;
+    padding-bottom: 10px;
+}
+.movie-card{
+    background: var(--card-grad);
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    position: relative;
+    min-height: 420px;
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-end;
+    box-shadow: 1px solid rgba(255,255,255,0.02);
+}
+.movie-card .poster{
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: contrast(0.95) saturate(0.9) brightness(0.6);
+}
+.movie-card .overlay{
+    position: relative;
+    padding: 18px;
+    z-index: 2;
+    background-position: linear-gradient(180deg,rgba(0,0,0,0) 40%, rgba(0,0,0,0.6) 100%)
+}
+.movie-card h3{
+    margin: 0 0 6px;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 18px;
+    
+}
+.meta{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    color: var(--muted);
+    font-size: 13px;
+}
+.rating{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(0,0,0,0.35);
+    padding: 6px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+}
+.detail-card{
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12));
+    border-radius: var(--card-radius);
+    padding: 20px;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.02);
+}
+.detail-card h3{
+    margin: 0;
+    font-family:'Montserrat',sans-serif;
+    font-size: 20px;
+}
+.detail-card p{color: var(--muted); font-size: 14px; line-height: 1.6; margin: 0;}
+
+.dots{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 18px;
+}
+.dot{
+    width:12px;
+    height: 6px;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.12);
+}
+ .films {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .film {
+            width: 230px;
+            text-align: center;
+        }
+
+        .film img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .footer {
+         background-color: #111;
+         color: #aaa;
+        text-align: center;
+        padding: 15px 0;
+        font-size: 14px;
+  }
+   .lang-switch {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background: black;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Dil satırları */
+.lang-item {
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Hover efekti */
+.lang-item:hover {
+  background: #f0f0f0;
+}
+
+/* Bayrak hizalama */
+.lang-item img {
+  width: 20px;
+  height: auto;
+}
+
+/* Toggle gizli */
+#menu-toggle {
+  display: none;
+}
+
+
+
+.dot.active{background: var(--accent); width:30px; height: 6px; border-radius: 6px;}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+   .logo {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .logo img {
+    width: 120px;   
+    height: auto;
+  } 
+
+  nav div {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .featured {
+    grid-template-columns: 1fr;
+  }
+  #intro {
+  position: fixed;
+  inset: 0;
+  background: black;
+  z-index: 9999;
+}
+
+#splash{
+  position:fixed;
+  inset:0;
+  background:black;
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+#splash video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.card {
+  background: #1e293b;
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 15px;
+}
+
+
+}
+
+</style>
+</head>
+<body>
+    
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="videologo.mp4" type="video/mp4">
+    </video>
+  
+    <div class="wrap" role="main" aria-label="Cineverse Demo">
+       <header>
+        <div class="logo">
+            <img src="resimler/logo1.png">
+            <div>
+                <h1>Watch Finder</h1>
+                
+            </div>
+        </div>
+    </div>
+
+        <nav class="menu">
+        <div>
+            <div style="display:flex;align-items: center; gap:30px;padding: 20px;">
+            <h1 style="margin: 0;color: white;"></h1>
+            <a href="index.html"  style="color:#ff4040;">Anasayfa</a>
+            <a href="filmler.html" style="color:#ff4040;">Filmler</a>
+            
+        </div>
+        </nav>
+
+       </header> 
+
+       <section class="hero" aria-labelledby="hero-title">
+        <h1 id="hero-title">HER FİLMDE BİR HAYAT</h1>
+        <p>Her film bir dünyadır; hangisine adım atacağını sen seç.</p>
+    </div>
+  </div>
+</section>
+
+  <div class="lang-switch">
+  <div class="lang-item">
+    <img src="https://flagcdn.com/w20/tr.png" alt="TR">
+    <a href="index.html" class="lang-item">
+    Türkçe
+    </a>
+  </div>
+  <div class="lang-item">
+    <img src="https://flagcdn.com/w20/us.png" alt="EN">
+    <a href="index-en.html" class="lang-item">
+    English
+    </a>
+  </div>
+  </div>
+</div>
+
+
+<h4 class="section-title">ÖNE ÇIKANLAR</h4>
+
+<div class="featured" aria-live="polite"></div>
+
+<article class="movie-card" arial-label="breakingbad">
+<div class="poster" style="background-image: url(flimler/breakingbad.png);"></div>
+<div class="overlay">
+    <h3>BREAKİNG BAD</h3>
+    <p>Kanser olduğunu öğrenen kimya öğretmeni Walter White, ailesini güvenceye almak için uyuşturucu üretmeye başlar ve zamanla suç dünyasında acımasız birine dönüşür.r</p>
+    <div class="muted">2008</div>
+</div>
+</article>
+
+<article class="movie-card" aria-label="fall">
+ <div class="poster" style="background-image: url(flimler/fallmov.png);"></div>   
+<div class="overlay">
+    <h3>FALL</h3>
+    <p>Yüksek televizyon yayın kulesinin tepesine (610 m) tırmanan ve orada mahsur kalan iki kadını konu almaktadır</p>
+    <div class="muted">2022</div>
+    </div>
+</article>
+
+<aside class="movie-card" aria-label="hizliveöfkeli">
+ <div class="poster" style="background-image: url(flimler/hız.jpeg);"></div>   
+<div class="overlay">
+    <h3 id="det-title">HIZLI VE ÖFKELİ</h3>
+    <p>Los Angeles’ta yasa dışı sokak yarışları yapan Dominic Toretto ve ekibi, hızlı arabalarla büyük soygunlar düzenleyerek para kazanır. 
+        Polis departmanı, ekibi yakalamak için Brian O’Conner isimli gizli bir polisi onların arasına sızdırır.</p>
+    <div class="muted">2001</div>
+    
+</div>
+</aside>
+
+<article class="movie-card" aria-label="buldozer">
+ <div class="poster" style="background-image: url(flimler/buldozer.jpeg);"></div>   
+<div class="overlay">
+    <h3>BULLDOZER</h3>
+    <p>Eski futbol yıldızı olan Bulldozer balıkçılık yapmaktadır. Yerel futbol takımını çalıştırması için bulldozerden yardım isteyen bir grupla olaylar karışır</p>
+    <div class="muted">1978</div>
+
+</div>
+</article>
+
+
+<footer class="footer">
+  <p>© 2025  | Tüm hakları saklıdır.</p>
+  Herhangi bir flime ev sahipliği yapmıyoruz veya yayınlamıyoruz. Tüm içerik bilgilendirme amaçlıdır.
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+  const splash = document.getElementById("splash");
+  const site = document.getElementById("site");
+
+  setTimeout(() => {
+    splash.style.display = "none";
+    site.style.display = "block";
+  }, 5000); // 5 saniye
+ 
+
+</script>
+</body>
+</html>
